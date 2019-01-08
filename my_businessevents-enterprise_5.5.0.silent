@@ -1,0 +1,49 @@
+<?xml  version="1.0"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>---Universal Installer Silent Installation Properties---</comment>
+
+<!--accept the license agreement-->
+<entry key="acceptLicense">true</entry>
+
+<!--the root installation directory-->
+<!--if the product does not support multiple instances and TIBCO_HOME has already been set then-->
+<!--this value is ignored and the existing TIBCO_HOME is used as the installation root-->
+<entry key="installationRoot">/opt/tibco</entry>
+
+<!--If using an existing environment then the installationRoot MUST match a pre-existing environment-->
+<!--If creating a new environment then the installationRoot MUST BE UNIQUE and not match a pre-existing environment-->
+<entry key="environmentDesc">TIBCO_HOME</entry>
+<entry key="createNewEnvironment">false</entry>
+
+
+<!--Product Feature settings-->
+<entry key="feature_TIBCO BusinessEvents Studio_businessevents-enterprise">true</entry>
+<entry key="feature_TIBCO BusinessEvents DataGrid_businessevents-enterprise">true</entry>
+<entry key="feature_Monitoring and Management_businessevents-enterprise">true</entry>
+<entry key="feature_Enterprise Administrator Agent_businessevents-enterprise">true</entry>
+<entry key="feature_Eclipse Platform_businessevents-enterprise">true</entry>
+<entry key="feature_Rules Management Server_businessevents-enterprise">true</entry>
+<entry key="feature_Examples_businessevents-enterprise">true</entry>
+
+<entry key="feature_Database Concepts_businessevents-enterprise">true</entry>
+<entry key="feature_State Modeler_businessevents-enterprise">true</entry>
+<entry key="feature_Examples_businessevents-enterprise">true</entry>
+
+<entry key="feature_Decision Manager_businessevents-enterprise">true</entry>
+<entry key="feature_Examples_businessevents-enterprise">true</entry>
+
+<entry key="feature_Query_businessevents-enterprise">true</entry>
+<entry key="feature_Pattern Matcher Framework_businessevents-enterprise">true</entry>
+<entry key="feature_Examples_businessevents-enterprise">true</entry>
+
+
+<!--Force re-installation of previously installed features-->
+<entry key="reinstallFeatures">true</entry>
+
+<!--The following entries are for LGPL assemblies for eclipse-->
+<entry key="LGPLAssemblyLicenseAccepted">true</entry>
+<entry key="LGPLAssemblyDownload">true</entry>
+<entry key="LGPLAssemblyPath"></entry>
+
+</properties>

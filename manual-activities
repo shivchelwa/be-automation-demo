@@ -1,0 +1,8 @@
+-Unlock jenkins using password at /var/lib/jenkins/secrets/initialAdminPassword
+-login to jenkins and change password
+-setup jdk under global tool config to add Java and Maven home
+-Install Plugins: Maven Integration, GitHub
+
+-Set local maven repository to /opt/maven/repository
+
+-Setup BE project

@@ -1,0 +1,23 @@
+<?xml  version="1.0"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>---Universal Installer Silent Installation Properties---</comment>
+
+<!--accept the license agreement-->
+<entry key="acceptLicense">true</entry>
+
+<!--the root installation directory-->
+<!--if the product does not support multiple instances and TIBCO_HOME has already been set then-->
+<!--this value is ignored and the existing TIBCO_HOME is used as the installation root-->
+<entry key="installationRoot">/opt/tibco</entry>
+
+<!--If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment-->
+<!--If creating a new environment then the installationRoot AND environmentName MUST BE UNIQUE and not match a pre-existing environment-->
+<entry key="environmentName">TIBCOBE_HOME</entry>
+<entry key="environmentDesc">AS 2.3 and BE 5.5.0 Installations</entry>
+
+<!--Product Feature Settings-->
+<entry key="feature_Runtime_activespaces">true</entry>
+<entry key="feature_Samples_activespaces">true</entry>
+
+</properties>
