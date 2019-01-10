@@ -68,7 +68,6 @@ The BusinessEvents EAR file be build, tested and pushed to local/remote reposito
 Setup a locaiton Jenkins server using Vagrant. A [Vagrantfile](https://github.com/shivchelwa/be-automation-demo/blob/master/vagrant/Vagrantfile) and [bootstrap.sh](https://github.com/shivchelwa/be-automation-demo/blob/master/vagrant/bootstrap.sh) are used to start a CentOS Virtualbox. Please note, you need to download ActiveSpace 2.3 BusinessEvents 5.5 linux distribtion from [TIBCO eDelivery](https://edelivery.tibco.com/storefront/index.ep) and place it in the same directory as Vagrantfile.
 
 ## Maven Profile
-
 You need to add a maven profile using [settings.xml](https://github.com/shivchelwa/be-automation-demo/blob/master/vagrant/settings.xml) to set environment variables such as BE installtion directory any other target directories.
 
 ## Jenkins Configrations
@@ -76,3 +75,11 @@ You need to add a maven profile using [settings.xml](https://github.com/shivchel
 * Change admin password
 * Install Jenkins Plugins - Maven Integration, GitHub, Pipeline
 * Add Git, JDK and Maven under Global Tool Config
+
+## BusinessEvents Jenkins Job
+* Add a new item
+* Provide Git project url
+* Provede Maven Goals e.g. docker-deploy
+* Alternatively,
+ * Git Webhooks can be used to trigger the build job on git push notifications.
+ * Jenkins Pipeline can be used setup multi stage delivery flow.
