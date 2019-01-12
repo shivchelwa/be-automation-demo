@@ -21,7 +21,7 @@ BE_HOME/maven/bin/install-be-maven-plugin.sh
 ```
 * Build a Base Docker Image for TIBCO BusinessEvents - To build a base image for TIBCO BusinessEvents. Open a shell and execute below command
 ```bash
-BE_HOME/build_be_image_frominstallation.sh -v 5.5.0 -i v01 -o true
+BE_HOME/docker/frominstall/build_be_image_frominstallation.sh -v 5.5.0 -i v01 -o true
 ```
 This command will create a base image with local repository with tag com.tibco.be:5.5.0-v01
 
