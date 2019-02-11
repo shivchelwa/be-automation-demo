@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element:Concept xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:element="http:///com/tibco/cep/designtime/core/model/element" namespace="/Concepts/" folder="/Concepts/" name="Coverage" description="" GUID="49EC31D3-4830-8169-104D-A7CE097FE396" ownerProjectName="Coverage" superConceptPath="" autoStartStateMachine="true">
+  <extendedProperties/>
+  <properties name="orgid" ownerProjectName="Coverage" ownerPath="/Concepts/Coverage"/>
+  <properties name="effective_date" ownerProjectName="Coverage" ownerPath="/Concepts/Coverage"/>
+  <properties name="expire_date" ownerProjectName="Coverage" ownerPath="/Concepts/Coverage"/>
+</element:Concept>

@@ -1,0 +1,36 @@
+/**
+ * @description 
+ */
+void rulefunction RuleFunctions.recvCoverageRequest {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		Events.CoverageRequest evt;
+	}
+	body {
+		Object logger = Log.getLogger("recvCoverageRequest");
+		evt.uuid = String.valueOfLong(System.ID.nextId("coverage"));
+		String req = evt@payload;
+		Log.log(logger, "info", "Received payload %s", req);
+		
+		// parse json payload to extract coverage id
+		Object root = JSON.parseJSON( req );
+		Object coverage = JSON.findNode( root, "coverage" );
+		String covKey = JSON.getTextValue( JSON.findValueNode( coverage, "reference" ) );
+		Object patient = JSON.findNode( root, "patient" );
+		String pref = JSON.getTextValue( JSON.findValueNode( patient, "reference" ) );
+		Log.log(logger, "info", "Construct coverage status for key %s and patient %s", covKey, pref);
+		
+		// create CoverageStatus concept to trigger rules
+		Concepts.CoverageStatus.CoverageStatus(
+			null /*extId String */,
+			covKey /*reference String */,
+			"" /*effectiveDate String */,
+			"" /*expireDate String */,
+			true /*inforce boolean */,
+			evt.uuid /*reqUuid String */,
+			pref /*patient String */,
+			System.currentTimeMillis() );
+	}
+}
